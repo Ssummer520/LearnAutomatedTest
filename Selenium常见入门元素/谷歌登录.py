@@ -1,8 +1,11 @@
-import base64
 import re
 import time
-
 import ddddocr
+import base64
+import js2py
+import requests as req
+from PIL import Image
+from io import BytesIO
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -39,7 +42,7 @@ def main():
     driver.get("https://accounts.google.com/signin/chrome/sync/identifier?ssp=1&continue=https%3A%2F%2Fwww.google.com%2F&flowName=GlifDesktopChromeSync")
     driver.refresh()
     driver1 = driver.find_element(By.ID, 'identifierId')
-    driver1.send_keys("#########")
+    driver1.send_keys("alan95121314@gmail.com")
     divs= driver.find_element(By.ID,'identifierNext')
     divs.click()
     print('我点击了')
@@ -48,7 +51,7 @@ def main():
     divs.click()
     print(driver.current_url)
     time.sleep(2)
-    driver.find_element(By.CSS_SELECTOR, 'input[type="password"]').send_keys('#########')
+    driver.find_element(By.CSS_SELECTOR, 'input[type="password"]').send_keys('Alan1213.')
     divs= driver.find_element(By.ID,'passwordNext')
     divs.click()
 
