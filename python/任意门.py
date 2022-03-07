@@ -1,10 +1,15 @@
-import 谷歌登录 as bing
+from Selenium常见入门元素 import 谷歌登录 as bing
+
+
 class Person:
-    name='a'
-    def set_name(self,name):
-        self.name=name
+    name = 'a'
+
+    def set_name(self, name):
+        self.name = name
+
     def get_name(self):
         return self.name
+
     def greet(self):
         print("hi! ervery one ! I'm {}".format(self.name))
 
